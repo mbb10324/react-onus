@@ -1,6 +1,6 @@
 # react-onus
 
-react-onus is a React component library to simplify the process of loading and error handling for assets within your project. react-onus offers a simple, effective, and smart approach to how we handle waiting on assets to load. Quickly create a better user experience, and faster development experience with react-onus.
+react-onus is a React component library designed to simplify the process of loading and error handling for assets like images, videos, fonts, and more within your projects. The library offers a simple, effective, and intelligent approach to managing the wait times associated with asset loading. Quickly create a better user experience, and achieve a faster development experience with react-onus.
 
 ## Installation
 
@@ -82,3 +82,7 @@ If you'd like to contribute to react-onus, please read our CONTRIBUTING.md guide
 ## License
 
 This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
+
+## Github
+
+[https://github.com/mbb10324/react-onus](https://github.com/mbb10324/react-onus "react-onus")
