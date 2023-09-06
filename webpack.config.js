@@ -13,9 +13,18 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				// Babel to handle react jsx
-				test: /\.(js|jsx)$/,
+				test: /\.tsx?$/,
 				exclude: /node_modules/,
+				use: {
+					loader: "ts-loader",
+					options: {
+						transpileOnly: true,
+					},
+				},
+			},
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules|\.ts$|\.tsx$/,
 				use: {
 					loader: "babel-loader",
 				},
@@ -27,7 +36,7 @@ module.exports = {
 			},
 			{
 				// Compile with media
-				test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+				test: /\.(jpg|mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
 				loader: "file-loader",
 				options: {
 					name: "[path][name].[ext]",
@@ -53,7 +62,7 @@ module.exports = {
 	],
 	resolve: {
 		// Resolve these files
-		extensions: [".js", ".jsx"],
+		extensions: [".tsx", ".ts", ".jsx", ".js"],
 	},
 	// Tell webpack to watch source map
 	devtool: "source-map",
@@ -78,5 +87,6 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		clean: true,
+		publicPath: "/",
 	},
 };
