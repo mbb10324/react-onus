@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import rainforest from "./Images/rainforest.jpg";
 import Arca from "./Components/Arca";
-import Onus from "react-onus";
+// import Onus from "react-onus";
+import Onus from "./lib/index";
 import "./App.css";
 
 export default function App() {
@@ -21,7 +22,12 @@ export default function App() {
 	];
 
 	return (
-		<Onus assets={assets}>
+		<Onus
+			assets={assets}
+			onLoaded={() => {
+				console.log("onloaded fired");
+			}}
+		>
 			<div className="app">
 				<Router>
 					<Routes>

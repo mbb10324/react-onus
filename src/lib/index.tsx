@@ -10,6 +10,7 @@ interface LoadingProviderProps {
 	loader?: ReactNode;
 	handleErrors?: boolean;
 	error?: ReactNode;
+	onLoaded?: () => void;
 }
 
 interface Asset {
@@ -55,7 +56,7 @@ function loadingReducer(state: LoadingState, action: LoadingAction): LoadingStat
 
 /*onus main component
  **********************************************************************************************/
-const Onus: React.FC<LoadingProviderProps> = ({ children, assets, loader, handleErrors, error }) => {
+const Onus: React.FC<LoadingProviderProps> = ({ children, assets, loader, handleErrors, error, onLoaded }) => {
 	//conditional logic to handle invalid props
 	if (!assets) {
 		console.error("Onus: You must provide at least one asset.");
@@ -150,8 +151,25 @@ const Onus: React.FC<LoadingProviderProps> = ({ children, assets, loader, handle
 		};
 	}, [assets, handleErrors]);
 
-	//check if all assets have loaded
-	const allAssetsLoaded = state.assetsToLoad === state.assetsLoaded;
+	//determine if all assets have loaded
+	function determineIfAllAssetsLoaded() {
+		if (state.assetsToLoad !== 0 && state.assetsLoaded !== 0 && state.assetsToLoad === state.assetsLoaded) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	//fire onLoaded callback if all assets have loaded
+	useEffect(() => {
+		if (determineIfAllAssetsLoaded() && onLoaded) {
+			onLoaded();
+		}
+		// eslint-disable-next-line
+	}, [state.assetsToLoad, state.assetsLoaded]);
+
+	//var to determine if all assets have loaded
+	const allAssetsLoaded = determineIfAllAssetsLoaded();
 
 	//conditional logic to render children, loader, or error
 	if (handleErrors && state.error) {

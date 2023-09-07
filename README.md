@@ -44,6 +44,13 @@ export default App;
 - `loader` (optional): A custom component displayed while assets load. If omitted, react-onus will show its default spinner.
 - `handleErrors` (optional): Set this to true if you want react-onus to handle asset loading errors. By default, this is set to false. If an asset fails during the preload process and handleErrors is false, the spinner will disappear once the preload result is received.
 - `error` (optional): Specify a custom error component to show if an error occurs. Without this prop, react-onus displays a default error message.
+- `onLoaded` (optional): A callback function that is called when all assets have loaded successfully. ex:
+
+```
+<Onus assets={someAssets} onLoaded={() => console.log("All assets have been loaded!")}>
+    {/* children */}
+</Onus>
+```
 
 ## Assets
 
