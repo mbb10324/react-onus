@@ -4,7 +4,6 @@
     </a>
 </div>
 <br />
-<br />
 react-onus is a robust React component within (`react-onus-lib`) designed to manage the preloading of assets like images, fonts, videos, audios, and svgs. Paired with this library is a test React application (`react-onus-test-app`) to showcase and test its features, allowing for seamless development and testing in one unified repository.
 
 ## Contributing
