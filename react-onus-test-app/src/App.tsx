@@ -6,7 +6,7 @@ export default function App() {
 	const assets = [
 		{
 			type: "font",
-			src: "TitilliumWeb-SemiBold",
+			src: "TitilliumWeb-SemiBol",
 		},
 		{
 			type: "image",
