@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.app-container {
+	height: 100%;
+	display: block;
+	overflow-x: hidden;
+	animation: fade-in 0.5s ease-in-out;
+}
+
+.app-header {
+	background-color: var(--White);
+	position: relative;
+}
+
+.app-header h1 {
+	font-family: "TitilliumWeb-SemiBold", sans-serif;
+	position: absolute;
+	font-size: 5vw;
+	margin: 8vw;
+	padding: 1vw;
+	color: #43b42c;
+	z-index: 2;
+	background-color: #6d676c9a;
+	border-radius: 2rem;
+	box-shadow: 0 0 30px #000000;
+	text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+
+.app-header img {
+	width: 100vw;
+	height: auto;
+	display: block;
+}
+
+.app-container video {
+	display: block;
+	width: 100vw;
+	height: auto;
+	border-top: 20px solid #000000;
+}
+
+@font-face {
+	font-family: "TitilliumWeb-SemiBold";
+	src: url(./fonts/TitilliumWeb-SemiBold.ttf) format("truetype");
+}

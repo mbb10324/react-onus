@@ -18,7 +18,7 @@
 		"outDir": "./dist"
 	},
 	//FOR BUILD
-	// "include": ["src/lib/**/*.ts", "src/lib/**/*.tsx", "src/lib/**/*.d.ts"],
-	"include": ["src/**/*.ts", "src/**/*.tsx", "/**/*.d.ts"],
+	"include": ["lib/**/*.ts", "lib/**/*.tsx", "lib/**/*.d.ts"],
+	// "include": ["src/**/*.ts", "src/**/*.tsx", "/**/*.d.ts"],
 	"exclude": ["node_modules"]
 }

@@ -5,10 +5,11 @@ import external from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
 import postcss from "rollup-plugin-postcss";
 import typescript from "rollup-plugin-typescript2";
+import eslint from "@rollup/plugin-eslint";
 
 export default [
 	{
-		input: "./src/lib/index.tsx", //source
+		input: "./lib/index.tsx", //source
 		output: [
 			{
 				file: "dist/index.es.js", //ecma module
@@ -17,6 +18,12 @@ export default [
 			},
 		],
 		plugins: [
+			eslint({
+				throwOnError: true,
+				throwOnWarning: true,
+				include: ["lib/**/*.ts", "lib/**/*.tsx"],
+				exclude: ["node_modules/**"],
+			}),
 			//bundles css into js and minifys
 			postcss({
 				plugins: [],
