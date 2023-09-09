@@ -3,7 +3,8 @@
         <img src="https://raw.githubusercontent.com/mbb10324/react-onus/main/docs/logo.png" alt="react-figura" width="50%" />
     </a>
 </div>
-
+<br />
+<br />
 react-onus is a React component library designed to simplify the process of loading and error handling for assets like images, videos, fonts, and more within your projects. The library offers a simple, effective, and intelligent approach to managing the wait times associated with asset loading. Quickly create a better user experience, and achieve a faster development experience with react-onus.
 
 ## Installation
