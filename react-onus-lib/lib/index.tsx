@@ -60,12 +60,20 @@ export default function Onus(props: LoadingProviderProps) {
 
 	//decide if we should render the error
 	if (handleErrors && state.error) {
-		return error || <div className="react-onus-error">An error occurred while loading assets.</div>;
+		return (
+			error || (
+				<div data-testid="react-onus-error" className="react-onus-error">
+					An error occurred while loading assets.
+				</div>
+			)
+		);
 	}
 	//if we don't want to handle loading, just render the children
 	if (!handleLoading) {
 		return children;
 	}
 	//render the children if all assets have loaded, otherwise render the loader
-	return determineIfAllAssetsLoaded(state) ? children : loader || <div className="react-onus-loader"></div>;
+	return determineIfAllAssetsLoaded(state)
+		? children
+		: loader || <div data-testid="react-onus-loader" className="react-onus-loader"></div>;
 }

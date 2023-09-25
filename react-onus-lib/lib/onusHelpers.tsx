@@ -13,7 +13,7 @@ import { ReactNode } from "react";
  */
 
 export function handleGeneralErrors(assets: Asset[], children: ReactNode) {
-	if (!assets) {
+	if (!assets || assets.length === 0) {
 		console.error("Onus: You must provide at least one asset.");
 		throw new Error("Onus: You must provide at least one asset.");
 	}

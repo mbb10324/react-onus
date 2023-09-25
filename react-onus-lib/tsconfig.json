@@ -15,10 +15,12 @@
 		"noEmit": false,
 		"jsx": "react-jsx",
 		"declaration": true,
-		"outDir": "./dist"
+		"outDir": "./dist",
+		"types": ["node", "jest"]
 	},
 	//FOR BUILD
 	"include": ["lib/**/*.ts", "lib/**/*.tsx", "lib/**/*.d.ts"],
-	// "include": ["src/**/*.ts", "src/**/*.tsx", "/**/*.d.ts"],
+	//FOR DEV
+	// "include": ["lib/**/*.ts", "lib/**/*.tsx", "lib/**/*.d.ts", "__tests__/**/*.ts", "__tests__/**/*.tsx"],
 	"exclude": ["node_modules"]
 }
