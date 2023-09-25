@@ -5,10 +5,10 @@
 </div>
 <br />
 <div align="center">
-<img src=" https://img.shields.io/badge/npm-v1.0.0-violet?style=for-the-badge" alt="badge"/>
-<img src=" https://img.shields.io/badge/gzip_size-9.4kB-orange?style=for-the-badge" alt="badge"/>
-<img src="  https://img.shields.io/badge/license-Apache_2.0-blue?style=for-the-badge" alt="badge"/>
-<img src="  https://img.shields.io/badge/coverage-100%25-green?style=for-the-badge" alt="badge"/>
+<img src="https://img.shields.io/badge/npm-v1.0.0-violet?style=for-the-badge" alt="badge"/>
+<img src="https://img.shields.io/badge/gzip_size-9.4kB-orange?style=for-the-badge" alt="badge"/>
+<img src="https://img.shields.io/badge/license-Apache_2.0-blue?style=for-the-badge" alt="badge"/>
+<img src="https://img.shields.io/badge/coverage-100%25-green?style=for-the-badge" alt="badge"/>
 </div>
 <br />
 
