@@ -1,9 +1,9 @@
 import rainforest from "./Images/rainforest.jpg";
-import Onus from "react-onus";
+import Onus, { type Asset } from "react-onus";
 import "./App.css";
 
 export default function App() {
-	const assets = [
+	const assets: Asset[] = [
 		{
 			type: "font",
 			src: "TitilliumWeb-SemiBol",
@@ -25,6 +25,7 @@ export default function App() {
 			onLoaded={() => {
 				console.log("onloaded fired");
 			}}
+			handleErrors={true}
 		>
 			<div className="app-container">
 				<div className="app-header">

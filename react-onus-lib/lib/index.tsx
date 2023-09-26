@@ -2,6 +2,7 @@ import { determineIfAllAssetsLoaded, handleGeneralErrors } from "./onusHelpers";
 import { LoadingProviderProps } from "./onusTypes";
 import { useOnusReducer } from "./onusReducer";
 import { useOnusHook } from "./onusHook";
+import { Asset } from "./onusTypes";
 import { useEffect } from "react";
 import "./style.css";
 
@@ -18,10 +19,10 @@ import "./style.css";
  * @prop onLoaded - (Optional) A callback function to be invoked when all assets have finished loading.
  *
  * @example
- *import Onus from 'react-onus';
+ *import Onus, { type Asset } from 'react-onus';
  *
  *function App() {
- *      const assets = [
+ *      const assets: Asset[] = [
  *          { type: "font", src: "Roboto" },
  *          { type: "image", src: "https://via.placeholder.com/150" },
  *      ];
@@ -77,3 +78,5 @@ export default function Onus(props: LoadingProviderProps) {
 		? children
 		: loader || <div data-testid="react-onus-loader" className="react-onus-loader"></div>;
 }
+
+export type { Asset };

@@ -1,10 +1,17 @@
 import { ReactNode } from "react";
 
-//asset type
-export interface Asset {
+/**
+ * `Asset` An object type containing the type and source of an asset to be loaded.
+ *
+ * @typedef {Object} Asset
+ * @property {("font" | "image" | "video" | "audio" | "svg")} type - The type of the asset.
+ * @property {string} src - The source of the asset.
+ */
+
+export type Asset = {
 	type: "font" | "image" | "video" | "audio" | "svg";
 	src: string;
-}
+};
 
 //prop types
 export interface LoadingProviderProps {

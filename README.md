@@ -5,7 +5,7 @@
 </div>
 <br />
 <div align="center">
-<img src="https://img.shields.io/badge/npm-v1.0.5-violet?style=for-the-badge" alt="badge"/>
+<img src="https://img.shields.io/badge/npm-v2.0.0-violet?style=for-the-badge" alt="badge"/>
 <img src="https://img.shields.io/badge/gzip_size-9.4kB-orange?style=for-the-badge" alt="badge"/>
 <img src="https://img.shields.io/badge/license-Apache_2.0-blue?style=for-the-badge" alt="badge"/>
 <img src="https://img.shields.io/badge/coverage-100%25-green?style=for-the-badge" alt="badge"/>
@@ -20,18 +20,18 @@ react-onus is a React component library designed to simplify the process of load
 
 ## Features
 
-- Handle loading of various assets to include images, videos, audio, fonts, and SVGs.
-- Handle errors when loading assets
-- Easily support custom loading and error components.
+-   Handle loading of various assets to include images, videos, audio, fonts, and SVGs.
+-   Handle errors when loading assets
+-   Easily support custom loading and error components.
 
 ## Usage
 
 ```
 import React from 'react';
-import Onus from 'react-onus';
+import Onus, { type Asset } from 'react-onus';
 
 const App = () => {
-  const assets = [
+  const assets: Asset[] = [
     { type: 'image', src: 'path-to-image.jpg' },
     { type: 'font', src: 'font-name' },
   ];
@@ -51,13 +51,13 @@ export default App;
 
 ## Props
 
-- `children`: By default react-onus will render (or show a loader/error in place of) the children within `<Onus></Onus>`
-- `assets` (required): An array of objects with type and src properties indicating the assets you want to wait for.
-- `loader` (optional): A custom component displayed while assets load. If omitted, react-onus will show its default spinner.
-- `error` (optional): Specify a custom error component to show if an error occurs. Without this prop, react-onus displays a default error message.
-- `handleLoading` (optional, default=true): Set this to false if you want react-onus to bypass showing a loader, this will simply return its children. You can use this in conjunction with onLoaded to handle your own loading state
-- `handleErrors` (optional, default=false): Set this to true if you want react-onus to handle asset loading errors. By default, this is set to false. If an asset fails during the preload process and handleErrors is false, the spinner will disappear once the preload result is received.
-- `onLoaded` (optional): A callback function that is called when all assets have loaded successfully. ex:
+-   `children`: By default react-onus will render (or show a loader/error in place of) the children within `<Onus></Onus>`
+-   `assets` (required): An array of objects with type and src properties indicating the assets you want to wait for.
+-   `loader` (optional): A custom component displayed while assets load. If omitted, react-onus will show its default spinner.
+-   `error` (optional): Specify a custom error component to show if an error occurs. Without this prop, react-onus displays a default error message.
+-   `handleLoading` (optional, default=true): Set this to false if you want react-onus to bypass showing a loader, this will simply return its children. You can use this in conjunction with onLoaded to handle your own loading state
+-   `handleErrors` (optional, default=false): Set this to true if you want react-onus to handle asset loading errors. By default, this is set to false. If an asset fails during the preload process and handleErrors is false, the spinner will disappear once the preload result is received.
+-   `onLoaded` (optional): A callback function that is called when all assets have loaded successfully. ex:
 
 ```
 <Onus assets={someAssets} onLoaded={() => console.log("All assets have been loaded!")}>

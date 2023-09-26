@@ -50,6 +50,6 @@
 		"react-dom": "^18.2.0"
 	},
 	"dependencies": {
-		"react-onus": "^0.0.9"
+		"react-onus": "^2.0.0"
 	}
 }
